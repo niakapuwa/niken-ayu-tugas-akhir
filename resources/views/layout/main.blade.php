@@ -47,6 +47,7 @@
           <a class="nav-link"">Halo, {{Auth::user()->nama}}!</a>
         </li>
       @endif
+      <li><a class="nav-link" href="{{ route('signout') }}">Logout</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
   </nav><!-- .navbar -->

@@ -1,3 +1,63 @@
+@extends('layout.main')
+@section('title', '| User')
+
+@section('konten')
+<!-- ======= Up Section ======= -->
+<section id="hero" class="d-flex align-items-center justify-content-center">
+  <div class="container" data-aos="fade-up">
+    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+     <div class="col-xl-11 col-lg-8">
+        <h2><span>Halo, User</span></h2>
+        <h2><span>Sudah menebar kebaikan untuk bumi hari ini?</span></h2>
+        <p>Poin tantangan kamu: 0</p>
+      </div>
+    </div>
+  </div>
+</section> <!-- End Up Section -->
+<!-- ======= user ======= -->
+<section id="admin" class="putih">
+  <div class="putih-title">
+    <p>Data diri</p>
+  </div>
+  <table class="table">
+    <tr>
+        <td>Nama Pengguna</td>
+        <td>Niken Ayu</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>nikenayu@gmail.com</td>
+    </tr>
+    <tr>
+        <td>Kota Tinggal</td>
+        <td>Sidoarjo</td>
+    </tr>
+    <tr>
+        <td>Nomor HP</td>
+        <td>0811111111</td>
+    </tr>
+    <tr>
+        <td>Jenis Kelamin</td>
+        <td>Perempuan</td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>abcdefggh</td>
+    </tr>
+    <tr>
+      <td>Ganti Password</td>
+      <td><input type="Password" name="password" class="form-control" id="pass" placeholder="Enter your password" required></td>
+  </tr>
+  </table>
+  <div class="col-sm-12 form-group mb-0">
+    <button class="btn-get float-center mt-1">Ubah data</button>
+  </div>
+</section>
+<!-- End user -->
+
+@endsection
+
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +69,11 @@
     <meta content="HTML, CSS, JavaScript, PHP" name="description">
     <meta content="Microplastic" name="keywords">
 
-    <!-- Favicons -->
+    // Favicons
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Google Fonts -->
+    // Google Fonts
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -21,7 +81,7 @@
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-icons/bootstrap-icons.css">
 
-    <!-- Template Main CSS File -->
+    // Template Main CSS File
     <link rel="stylesheet" href="css/user.css">
 </head>
 <body>
@@ -106,3 +166,4 @@
 <script type="text/javascript"></script>
 </body>
 </html>
+-->
