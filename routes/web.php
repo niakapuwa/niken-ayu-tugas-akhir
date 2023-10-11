@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChallengeController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,11 +22,13 @@ Route::get('Hujan-Mikroplastik-di-Paris:Fenomena-Baru-yang-Buruk', [SessionContr
 Route::get('Bahaya-Oxodegradable:Solusi-yang-Menjadi-Masalah-Baru', [SessionController::class, 'ar3']);
 
 # Tantangan Route
-Route::get('tantangan', [ChallengeController::class, 'challengeList'])->name("challenge-list");
-Route::get('tantangan-1', [ChallengeController::class, 'firstChallenge'])->name("first-challenge");
-Route::post('tantangan', [ChallengeController::class, 'postChallenge'])->name("challenge.post");
-Route::get('tantangan-2', [SessionController::class, 'celen2'])->name("second-challenge");
-Route::get('tantangan-3', [SessionController::class, 'celen3'])->name("third-challenge");
+Route::get('/tantangan', [ChallengeController::class, 'challengeList'])->name("challenge-list");
+Route::get('/tantangan-1', [ChallengeController::class, 'firstChallenge'])->name("first-challenge");
+Route::post('/tantangan-1', [ChallengeController::class, 'postFirstChallenge'])->name("first-challenge.post");
+Route::get('/tantangan-2', [ChallengeController::class, 'secondChallenge'])->name("second-challenge");
+Route::post("/tantangan-2", [ChallengeController::class, "postSecondChallenge"])->name("second-challenge.post");
+Route::get('/tantangan-3', [ChallengeController::class, 'thirdChallenge'])->name("third-challenge");
+Route::post('/tantangan-3', [ChallengeController::class, 'postThirdChallenge'])->name("third-challenge.post");
 
 
 Route::get('form-tantangan-pertama', [SessionController::class, 'ucelen1']);
@@ -42,17 +45,16 @@ Route::get('/tentang-kita', [SessionController::class, 'tk']);
 # Login Route
 Route::get('/masuk', [AuthController::class, 'loginView'])->name('login.get');
 Route::post("/masuk", [AuthController::class, "loginForm"])->name("login.post");
-Route::get('/dashboard', [SessionController::class, 'dashboard']);
-Route::post('/postlogin', [SessionController::class, 'login'])->name('postlogin');
 
 # Regis Route
 Route::get('/registrasi', [AuthController::class, 'registerView'])->name('register.get');
 
 Route::post('/postsignup', [AuthController::class, 'registerForm'])->name('register.post');
-Route::get('/signout', [AuthController::class, 'signOut'])->name('signOut.get');
+Route::get('/signout', [AuthController::class, 'signOut'])->name('signout');
 
 # User Route
-Route::get('/user', [SessionController::class, 'user']);
+Route::get("/user", [UserController::class, "user"])->name("user");
+Route::post("/change-password", [AuthController::class, "changePassword"])->name("change-password");
 
 # Admin Route
 Route::get('/admin', [SessionController::class, 'admin']);

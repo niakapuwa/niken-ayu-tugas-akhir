@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use App\Models\usr;
@@ -121,7 +122,7 @@ class SessionController extends Controller
     //ADMIN
     // index admin
     function admin(){
-        $data = usr::orderBy('id','desc')->paginate(2);
+        $data = User::orderBy('id')->paginate(2);
         return view("admin/admin") -> with('data', $data);
     }
 

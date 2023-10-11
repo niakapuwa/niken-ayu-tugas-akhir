@@ -15,25 +15,25 @@
     <div class="text-center">
       <p>Coba sehari jajan di luar dengan memakai tempat minum dan makan sendiri dari rumah! Jangan lupa sedotan stainless juga ya!</p>
     </div>
-    <form method="POST" action="{{ route('challenge.post') }}" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('first-challenge.post') }}" enctype="multipart/form-data">
       @csrf
       <div class="mb-3">
         <label for="formFile" class="form-label">Pakai tumblr sendiri</label>
-        <input class="form-control" type="file" id="formFile" name="challengeItem1" required>
+        <input class="form-control" type="file" id="formFile" name="challengeItem1" accept="image/*" required>
       </div>
       <div class="mb-3">
         <label for="formFile" class="form-label">Selalu pakai sedotan stainless steel</label>
-        <input class="form-control" type="file" id="formFile" name="challengeItem2" required>
+        <input class="form-control" type="file" id="formFile" name="challengeItem2" accept="image/*" required>
       </div>
       <div class="mb-3">
         <label for="formFile" class="form-label">Pakai totebag atau tas pakai ulang (reuse)</label>
-        <input class="form-control" type="file" id="formFile" name="challengeItem3" required>
+        <input class="form-control" type="file" id="formFile" name="challengeItem3" accept="image/*" required>
       </div>
       <div>
         <input class="form-control" id="formFile" name="user_id" value="{{ Auth::user()->id }}" hidden>
       </div>
       <button class="btn-com" type="submit">Selesaikan Tantangan</button>
-  </form>
+    </form>
 
 </section>
 <!-- End Tantangan -->

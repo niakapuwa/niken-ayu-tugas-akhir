@@ -36,7 +36,7 @@
   <h2 class="logo me-auto me-lg-0"><a href="/">Beridampak</a></h2>
 
   <nav id="navbar" class="navbar order-last oreder-lg-0">
-      <ul>
+    <ul>
       <li><a href="/#about">Tentang Kita</a></li>
       <li><a href="/artikel">Artikel</a></li>
       <li><a href="/lokasi">Lokasi</a></li>
@@ -44,11 +44,13 @@
       <!-- halo, user -->
       @if (Auth::check())
         <li>
-          <a class="nav-link"">Halo, {{Auth::user()->nama}}!</a>
+          <a href="{{ route('user') }}">Halo, {{Auth::user()->nama}}!</a>
+        </li>
+        <li>
+          <a href="{{ route('signout') }}">Logout</a>
         </li>
       @endif
-      <li><a class="nav-link" href="{{ route('signout') }}">Logout</a></li>
-      </ul>
+    </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
   </nav><!-- .navbar -->
 </div>

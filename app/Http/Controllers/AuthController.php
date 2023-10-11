@@ -3,33 +3,41 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
+use function PHPUnit\Framework\returnSelf;
 
 //SESI
 // form login
 class AuthController extends Controller
 {
-    public function loginView() : View {
+    public function loginView(): View
+    {
         return view("sesi.login");
     }
 
-    public function registerView() : View {
+    public function registerView(): View
+    {
         return view("sesi.regis");
     }
 
-    public function loginForm(Request $request) {
+    public function loginForm(Request $request): View
+    {
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect(route('challenge-list'));
+            return view("halaman.tantangan");
         }
         return view("sesi.login");
     }
 
-    public function registerForm(Request $request) {
+    public function registerForm(Request $request): RedirectResponse
+    {
         User::create([
             "nama" => $request->name,
             "alamat" => $request->address,
@@ -41,9 +49,22 @@ class AuthController extends Controller
         return redirect(route("login.get"));
     }
 
-    public function signOut() {
+    public function changePassword(Request $request)
+    {
+        $password = Hash::make($request->password);
+        $user = User::find($request->user_id);
+        $user->password = $password;
+
+        $user->save();
+
         Auth::logout();
-   
+        return redirect(route("login.get"));
+    }
+
+    public function signOut(): RedirectResponse
+    {
+        Auth::logout();
+
         return redirect(route("challenge-list"));
     }
 }

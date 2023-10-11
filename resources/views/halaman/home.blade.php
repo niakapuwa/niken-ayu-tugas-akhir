@@ -37,10 +37,10 @@
 
   <nav id="navbar" class="navbar order-last oreder-lg-0">
       <ul>
-      <li><a class="nav-link scrollto" href="#about">Tentang Kita</a></li>
-      <li><a class="nav-link scrollto" href="#artikel">Artikel</a></li>
-      <li><a class="nav-link scrollto" href="#lokasi">Lokasi</a></li>
-      <li><a class="nav-link scrollto" href="#tantangan">Tantangan</a></li>
+      <li><a class="scrollto" href="#about">Tentang Kita</a></li>
+      <li><a class="scrollto" href="#artikel">Artikel</a></li>
+      <li><a class="scrollto" href="#lokasi">Lokasi</a></li>
+      <li><a class="scrollto" href="#tantangan">Tantangan</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
   </nav><!-- .navbar -->
