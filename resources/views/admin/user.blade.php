@@ -19,35 +19,39 @@
   <div class="putih-title">
     <p>Data diri</p>
   </div>
-  <table class="table">
-    <tr>
-      <td>Nama Pengguna</td>
-      <td>{{ Auth::user()->nama }}</td>
-    </tr>
-    <tr>
-      <td>Email</td>
-      <td>{{ Auth::user()->email }}</td>
-    </tr>
-    <tr>
-      <td>Kota Tinggal</td>
-      <td>{{ Auth::user()->alamat }}</td>
-    </tr>
-    <tr>
-      <td>Nomor HP</td>
-      <td>{{ Auth::user()->no_hp }}</td>
-    </tr>
-    <tr>
-      <td>Jenis Kelamin</td>
-      <td>{{ Auth::user()->gender }}</td>
-    </tr>
-  </table>
-  <form method="post" action="{{ route('change-password') }}">
+  <form method="post" action="{{ route('change-password') }}" class="row g-3">
+    <div class="mb-3 row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Nama</label>
+      <div class="col-sm-10">
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{ Auth::user()->nama }}">
+      </div>
+      <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{ Auth::user()->email }}">
+      </div>
+      <label for="staticEmail" class="col-sm-2 col-form-label">Kota Tinggal</label>
+      <div class="col-sm-10">
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{ Auth::user()->alamat }}">
+      </div>
+      <label for="staticEmail" class="col-sm-2 col-form-label">Nomor HP</label>
+      <div class="col-sm-10">
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{ Auth::user()->no_hp }}">
+      </div>
+      <label for="staticEmail" class="col-sm-2 col-form-label">Jenis Kelamin</label>
+      <div class="col-sm-10">
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{ Auth::user()->gender }}">
+      </div>
+    </div>
     @csrf
-    <label for="password">Ganti Password</label>
-    <input type="password" name="password" class="form-control" style="max-width: 50vh" id="password" placeholder="Enter your password" required>
-    <input name="user_id" class="form-control" id="userID" value="{{ Auth::user()->id }}" hidden required>
-    <div class="col-sm-12 form-group mb-0">
-      <button class="btn-get float-center mt-1">Ubah password</button>
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label">Ganti Password</label>
+      <div class="col-sm-10">
+        <input type="password" name="password" class="form-control" id="inputPassword" style="max-width: 50vh">
+      </div>
+      <input name="user_id" class="form-control" id="userID" value="{{ Auth::user()->id }}" hidden required>
+      <div class="col-sm-12 form-group mb-0">
+        <button class="btn-get float-center mt-1">Ubah password</button>
+      </div>
     </div>
   </form>
 </section>

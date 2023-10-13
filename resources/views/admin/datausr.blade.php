@@ -48,7 +48,8 @@
 <section id="admin" class="putih">
   <div class="putih-title">
     <a class='btn btn-secondary btn-sm' href="{{ url('/admin') }}">Kembali</a>
-    <p>Data pengguna: Niken</p> 
+    <!-- <p>Data pengguna: Niken</p>  -->
+    
   </div>
   <a class='btn btn-warning btn-sm' href="{{ url('') }}">Hapus pengguna</a>
 </section>
