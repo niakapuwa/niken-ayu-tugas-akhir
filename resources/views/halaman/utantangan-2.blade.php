@@ -32,8 +32,18 @@
       <div>
         <input class="form-control" id="formFile" name="user_id" value="{{ Auth::user()->id }}" hidden>
       </div>
-      <button class="btn-com" type="submit">Selesaikan tantangan</button>
+      <button class="btn-com mb-3" type="submit">Selesaikan tantangan</button>
     </form>
+    @if(session("success"))
+      <div class="alert alert-success" role="alert">
+        {{ session("success") }}
+      </div>
+    @endif
+    @if(session("failed"))
+      <div class="alert alert-danger" role="alert">
+        {{ session("failed") }}
+      </div>
+    @endif
   </div>
 </section>
 <!-- End Tantangan -->

@@ -49,10 +49,29 @@ class AuthController extends Controller
         return redirect(route("login.get"));
     }
 
-    public function changePassword(Request $request)
+    public function changeUserData(Request $request)
     {
         $password = Hash::make($request->password);
         $user = User::find($request->user_id);
+        $user->nama = $request->name;
+        $user->email = $request->email;
+        $user->alamat = $request->alamat;
+        $user->gender = $request->gender;
+        $user->no_hp = $request->phone;
+
+        $user->password = $password;
+
+        $user->save();
+
+        Auth::logout();
+        return redirect(route("login.get"));
+    }
+
+    public function changeUserPassword(Request $request)
+    {
+        $password = Hash::make($request->password);
+        $user = User::find($request->user_id);
+
         $user->password = $password;
 
         $user->save();

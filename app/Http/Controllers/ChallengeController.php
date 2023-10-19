@@ -54,8 +54,10 @@ class ChallengeController extends Controller
     public function postFirstChallenge(Request $request): View
     {
         if (!$this->storeFile($request)) {
+            session()->flash("failed", "failed to save challenge image");
             return view("halaman.utantangan-1");
         }
+        session()->flash("success", "success to save challenge image");
         return view("halaman.utantangan-1");
     }
 
@@ -70,9 +72,11 @@ class ChallengeController extends Controller
     public function postSecondChallenge(Request $request): View
     {
         if (!$this->storeFile($request)) {
-            return view("halaman.utantangan-2");
+            session()->flash("failed", "failed to save challenge image");
+            return view("halaman.utantangan-2")->with("status", "Upload photo failed");
         }
-        return view("halaman.utantangan-2");
+        session()->flash("success", "success to save challenge image");
+        return view("halaman.utantangan-2")->with("status", "Upload photo successfull");
     }
 
     public function thirdChallenge(): View
@@ -87,7 +91,8 @@ class ChallengeController extends Controller
     {
         $path = $request->file("challengeItem1")->store("challengeItems");
         if (!$path) {
-            return false;
+            session()->flash("failed", "failed to save challenge image");
+            return view("halaman.utantangan-3")->with("status", "Upload photo failed");
         }
         UploadedFile::create([
             "filename" => $path,
@@ -95,12 +100,14 @@ class ChallengeController extends Controller
         ]);
         $path = $request->file("challengeItem2")->store("challengeItems");
         if (!$path) {
-            return false;
+            session()->flash("failed", "failed to save challenge image");
+            return view("halaman.utantangan-3")->with("status", "Upload photo failed");
         }
         UploadedFile::create([
             "filename" => $path,
             "user_id" => $request->user_id,
         ]);
-        return view("halaman.utantangan-3");
+        session()->flash("success", "success to save challenge image");
+        return view("halaman.utantangan-3")->with("status", "Upload photo successfull");
     }
 }

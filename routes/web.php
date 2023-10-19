@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChallengeController;
 use App\Http\Controllers\SessionController;
@@ -54,8 +55,12 @@ Route::get('/signout', [AuthController::class, 'signOut'])->name('signout');
 
 # User Route
 Route::get("/user", [UserController::class, "user"])->name("user");
-Route::post("/change-password", [AuthController::class, "changePassword"])->name("change-password");
+Route::post("/change-userdata", [AuthController::class, "changeUserData"])->name("change-userdata");
+Route::post("/change-userpassword", [AuthController::class, "changeUserPassword"])->name("change-userpassword");
 
 # Admin Route
-Route::get('/admin', [SessionController::class, 'admin']);
-Route::get('/admin/detail-user', [SessionController::class, 'dtl']);
+// Route::get('/admin', [SessionController::class, 'admin']);
+// Route::get('/admin/detail-user', [SessionController::class, 'dtl']);
+
+Route::get('/admin', [AdminController::class, 'getUserInAdmin'])->name("admin");
+Route::get('/admin-user', [AdminController::class, 'getDetailUserInAdmin'])->name("admin-user");
