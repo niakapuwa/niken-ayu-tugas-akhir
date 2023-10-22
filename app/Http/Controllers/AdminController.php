@@ -12,10 +12,10 @@ class AdminController extends Controller
 {
     public function getUserInAdmin(Request $request): View
     {
-        $userFileCounts = UploadedFile::select('user.id', 'user.nama', 'user.email', 'user.created_at')
-        ->selectRaw('COUNT(filename) * 50 as file_count')
-        ->join('user', 'uploaded_files.user_id', '=', 'user.id')
-        ->groupBy('user_id')
+        $userFileCounts = User::select('user.id', 'user.nama', 'user.email', 'user.created_at')
+        ->leftJoin('uploaded_files as uf', 'user.id', '=', 'uf.user_id')
+        ->selectRaw('IFNULL(COUNT(uf.filename) * 50, 0) as file_count')
+        ->groupBy('user.id', 'user.nama', 'user.email')
         ->paginate(2);
         return view("admin.admin")->with('data', $userFileCounts);
     }

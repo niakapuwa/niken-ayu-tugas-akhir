@@ -13,7 +13,7 @@ class UploadedFile extends Model
     protected $table = "uploaded_files";
 
     protected $fillable = [
-        "id", "filename", "user_id",
+        "id", "filename", "user_id", "challenge_type"
     ];
 
     public function user() : BelongsTo {

@@ -28,6 +28,9 @@
       <div>
         <input class="form-control" id="formFile" name="user_id" value="{{ Auth::user()->id }}" hidden>
       </div>
+      <div>
+        <input class="form-control" id="formFile" name="challengeType" value="tantangan 3" hidden>
+      </div>
       <button id="form-challenge-btn" class="btn-com mb-3" type="submit">Selesaikan tantangan</button>
   </div>
   </form>
