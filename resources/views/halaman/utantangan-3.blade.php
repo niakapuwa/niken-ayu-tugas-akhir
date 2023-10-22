@@ -15,7 +15,7 @@
     <div class="text-center">
       <p>Tantang dirimu memakai produk ramah lingkungan. Produk bisa kamu beli di supermarket terdekat atau di halaman lokasi website ini.</p>
     </div>
-    <form method="post" action="{{ route('third-challenge.post') }}" enctype="multipart/form-data">
+    <form id="form-challenge" method="post" action="{{ route('third-challenge.post') }}" enctype="multipart/form-data">
       @csrf
       <div class="mb-3">
         <label for="formFile" class="form-label">Memakai facecare non-mikroplastik (sabun muka, toner, sunscreen, dan sebagainya)</label>
@@ -28,7 +28,7 @@
       <div>
         <input class="form-control" id="formFile" name="user_id" value="{{ Auth::user()->id }}" hidden>
       </div>
-      <button class="btn-com mb-3" type="submit">Selesaikan tantangan</button>
+      <button id="form-challenge-btn" class="btn-com mb-3" type="submit">Selesaikan tantangan</button>
   </div>
   </form>
   @if(session("success"))

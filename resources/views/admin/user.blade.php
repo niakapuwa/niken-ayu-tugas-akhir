@@ -19,7 +19,7 @@
   <div class="putih-title">
     <p>Data diri</p>
   </div>
-  <form method="post" action="{{ route('change-userdata') }}" class="row g-3">
+  <form method="post" id="form-user-data" action="{{ route('change-userdata') }}" class="row g-3">
     @csrf
     <div class="mb-3 row">
       <label class="col-sm-2 col-form-label">Nama</label>
@@ -49,7 +49,7 @@
     </div>
     <input name="user_id" class="form-control" id="userID" value="{{ Auth::user()->id }}" hidden required>
     <div class="col-sm-12 form-group mb-0">
-      <button class="btn-get float-center mt-1">Ubah Data Diri</button>
+      <button type="submit" id="change-user-data-btn" class="btn-get float-center mt-1">Ubah Data Diri</button>
     </div>
   </form>
 </section>

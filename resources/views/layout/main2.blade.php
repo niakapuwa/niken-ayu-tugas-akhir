@@ -108,7 +108,7 @@
   <script src="css/bootstrap/js/jquery.js"></script>
   <script src="css/bootstrap/js/bootstrap.min.js"></script>
   <script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="css/main.js"></script>
 </body>
 

@@ -15,7 +15,7 @@
     <div class="text-center">
       <p>Sehari belajar mengurangi polusi mikroplastik dari ban kendaraan.</p>
     </div>
-    <form method="POST" action="{{ route('second-challenge.post') }}" enctype="multipart/form-data">
+    <form id="form-challenge" method="POST" action="{{ route('second-challenge.post') }}" enctype="multipart/form-data">
       @csrf
       <div class="mb-3">
         <label for="formFile" class="form-label">Bersepeda saat berpergian</label>
@@ -32,7 +32,7 @@
       <div>
         <input class="form-control" id="formFile" name="user_id" value="{{ Auth::user()->id }}" hidden>
       </div>
-      <button class="btn-com mb-3" type="submit">Selesaikan tantangan</button>
+      <button id="form-challenge-btn" class="btn-com mb-3" type="submit">Selesaikan tantangan</button>
     </form>
     @if(session("success"))
       <div class="alert alert-success" role="alert">

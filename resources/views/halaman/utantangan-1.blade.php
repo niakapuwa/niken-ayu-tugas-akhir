@@ -8,14 +8,11 @@
     <div class="celen-title">
       <p>Sehari memakai barang guna ulang</p>
     </div>
-    <div class="video">
-      <iframe src=></iframe>
-    </div>
     <br>
     <div class="text-center">
       <p>Coba sehari jajan di luar dengan memakai tempat minum dan makan sendiri dari rumah! Jangan lupa sedotan stainless juga ya!</p>
     </div>
-    <form method="POST" action="{{ route('first-challenge.post') }}" enctype="multipart/form-data">
+    <form id="form-challenge" method="POST" action="{{ route('first-challenge.post') }}" enctype="multipart/form-data">
       @csrf
       <div class="mb-3">
         <label for="formFile" class="form-label">Pakai tumblr sendiri</label>
@@ -32,7 +29,7 @@
       <div>
         <input class="form-control" id="formFile" name="user_id" value="{{ Auth::user()->id }}" hidden>
       </div>
-      <button class="btn-com mb-3" type="submit">Selesaikan Tantangan</button>
+      <button id="form-challenge-btn" class="btn-com mb-3" type="submit">Selesaikan Tantangan</button>
     </form>
     @if(session("success"))
       <div class="alert alert-success" role="alert">

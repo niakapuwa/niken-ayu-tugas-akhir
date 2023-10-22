@@ -152,6 +152,42 @@
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
   });
 </script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+  document.getElementById('change-user-data-btn').addEventListener('click', function(e) {
+    e.preventDefault()
+    swal({
+        title: "Konfirmasi",
+        text: "Apa anda yakin ingin mengubah data diri?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((result) =>  {
+        if (result) {
+          console.log("submit form");
+          document.getElementById("form-user-data").submit()
+        }
+      });
+    });
+</script>
 
+<script>
+  document.getElementById('form-challenge-btn').addEventListener('click', function(e) {
+    e.preventDefault()
+    swal({
+        title: "Konfirmasi",
+        text: "Apa anda memasukkan foto tantangan dengan benar?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((result) =>  {
+        if (result) {
+          document.getElementById("form-challenge").submit()
+        }
+      });
+    });
+</script>
 
 </html>
