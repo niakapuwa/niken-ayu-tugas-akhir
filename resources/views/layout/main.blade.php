@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-<link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,7 +12,10 @@
   <meta content="Microplastic" name="keywords">
 
   <!-- Favicons -->
-  
+  <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
