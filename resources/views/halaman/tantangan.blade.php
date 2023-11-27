@@ -12,6 +12,7 @@
         </div>
         <p>Yey, kamu berani untuk mencoba gaya hidup baru! Disini kamu bisa belajar sekaligus menantang dirimu dengan beberapa tantangan yang telah disiapkan.</p>
         <p>Tenang, tantangan nya mudah kok! Bisa diikuti baik bagi yang sudah lama hidup ramah lingkungan atau yang baru ingin memulai ramah lingkungan.</p>
+        <p>Setiap poin tantangan yang terselesaikan, kamu akan mendapatkan 50 poin. 1 (satu) tantangan dapat berisi lebih dari 2 (dua) poin tantangan.</p>
       </div>
     </div>
   </div>
