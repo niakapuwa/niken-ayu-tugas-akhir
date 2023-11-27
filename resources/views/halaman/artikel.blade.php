@@ -3,7 +3,7 @@
 
 @section('konten')
 
-<section id="up" class="hero">
+<section id="upc" class="carousel">
   <div id="carouselExampleDark" class="carousel carousel-dark slide w-100 h-50">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -13,23 +13,20 @@
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="1000">
         <img src="img/slider1.jpg" class="d-block w-100">
-        <div class="carousel-caption d-none d-md-block">
-          <h3>Oxodegradable: Solusi atau Hanya Sebuah Ilusi dalam Menghadapi Krisis Plastik?</h3>
-          <!-- <p>Dalam era modern, kita sering mendengar istilah "ramah lingkungan", termasuk dalam konteks plastik. Namun, sejauh mana kebenaran dari klaim ini? Apakah plastik ramah lingkungan benar-benar ramah terhadap Bumi kita?</p>-->
+        <div class="carousel-caption d-md-block">
+          <h3><a href="/Oxodegradable:-Solusi-atau-Hanya-Sebuah-Ilusi-dalam-Menghadapi-Krisis-Plastik?">Oxodegradable: Solusi atau Hanya Sebuah Ilusi dalam Menghadapi Krisis Plastik?</a></h3>
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="1000">
         <img src="img/slider2.jpeg" class="d-block w-100">
-        <div class="carousel-caption d-none d-md-block">
-          <h3>Mikroplastik: Ancaman Global dan Potensi Bahaya bagi Manusia</h3>
-          <!-- <p>Dalam era modern ini, mikroplastik telah menjadi ancaman serius yang menyebar ke seluruh penjuru dunia. Mari kita gali lebih dalam tentang apa itu mikroplastik, pengaruhnya pada kesehatan, dan apa yang bisa kita lakukan untuk mengatasi masalah ini.</p>-->
+        <div class="carousel-caption d-md-block">
+          <h3><a href="/Mikroplastik:-Ancaman-Global-dan-Potensi-Bahaya-bagi-Manusia">Mikroplastik: Ancaman Global dan Potensi Bahaya bagi Manusia</a></h3>
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="1000">
         <img src="img/slider3.jpg" class="d-block w-100">
-        <div class="carousel-caption d-none d-md-block">
-          <h3>Paris: Saksi Bisu Hujan Mikroplastik Pertama Dunia</h3>
-          <!-- <p>Paris, ibu kota Perancis yang sangat dikenal dengan cinta dan keindahannya, kini menghadapi ancaman baru: hujan mikroplastik. Sebuah fenomena yang mengkhawatirkan dan mencerminkan urgensi masalah lingkungan global.</p>-->
+        <div class="carousel-caption d-md-block">
+          <h3><a href="/Paris:-Saksi-Bisu-Hujan-Mikroplastik-Pertama-Dunia">Paris: Saksi Bisu Hujan Mikroplastik Pertama Dunia</a></h3>
         </div>
       </div>
     </div>
@@ -57,8 +54,8 @@
           <a href="img/mikroplastik.jpeg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="img/mikroplastik.jpeg" class="img-fluid" alt=""></a>
           <div class="portfolio-info">
             <h4>Mikroplastik: Ancaman Global dan Potensi Bahaya bagi Manusia</h4>
-            <p>Dalam era modern ini, mikroplastik telah menjadi ancaman serius yang menyebar ke seluruh penjuru dunia. Mari kita gali lebih dalam tentang apa itu mikroplastik, pengaruhnya pada kesehatan, dan apa yang bisa kita lakukan untuk mengatasi masalah ini.</p>
-            <button class="btn-com"><a href="/Mikroplastik:-Ancaman-Global-dan-Potensi-Bahaya-bagi-Manusia">Baca artikel</a></button>
+            <p>Dalam era modern ini, mikroplastik telah menjadi ancaman serius yang menyebar ke seluruh penjuru dunia. Mari kita gali lebih dalam tentang apa itu mikroplastik, pengaruhnya pada kesehatan menurut para ahli, dan apa yang bisa kita lakukan untuk mengatasi masalah ini.</p>
+            <button class="btn-com"><a href="/Mikroplastik:-Ancaman-Global-dan-Potensi-Bahaya-bagi-Manusia">Pelajari lebih lanjut</a></button>
           </div>
           </div>
           </div><!-- End Portfolio Item -->
@@ -68,8 +65,8 @@
           <a href="img/hujan.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="img/hujan.jpg" class="img-fluid" alt=""></a>
           <div class="portfolio-info">
             <h4>Paris: Saksi Bisu Hujan Mikroplastik Pertama Dunia</h4>
-            <p>Paris, ibu kota Perancis yang sangat dikenal dengan cinta dan keindahannya, kini menghadapi ancaman baru: hujan mikroplastik. Sebuah fenomena yang mengkhawatirkan dan mencerminkan urgensi masalah lingkungan global.</p>
-            <button class="btn-com"><a href="/Paris:-Saksi-Bisu-Hujan-Mikroplastik-Pertama-Dunia">Baca artikel</a></button>
+            <p>Paris, ibu kota Perancis yang sangat dikenal dengan cinta dan keindahannya, kini menghadapi ancaman baru: hujan mikroplastik. Sebuah fenomena baru di dunia yang mengkhawatirkan dan mencerminkan bagaimana urgensi masalah lingkungan secara global.</p>
+            <button class="btn-com"><a href="/Paris:-Saksi-Bisu-Hujan-Mikroplastik-Pertama-Dunia">Pelajari lebih lanjut</a></button>
           </div>
           </div>
           </div><!-- End Portfolio Item -->
@@ -80,7 +77,7 @@
           <div class="portfolio-info">
             <h4>Oxodegradable: Solusi atau Hanya Sebuah Ilusi dalam Menghadapi Krisis Plastik?</h4>
             <p>Dalam era modern, kita sering mendengar istilah "ramah lingkungan", termasuk dalam konteks plastik. Namun, sejauh mana kebenaran dari klaim ini? Apakah plastik ramah lingkungan benar-benar ramah terhadap Bumi kita?</p>
-            <button class="btn-com"><a href="/Oxodegradable:-Solusi-atau-Hanya-Sebuah-Ilusi-dalam-Menghadapi-Krisis-Plastik?">Baca artikel</a></button>
+            <button class="btn-com"><a href="/Oxodegradable:-Solusi-atau-Hanya-Sebuah-Ilusi-dalam-Menghadapi-Krisis-Plastik?">Pelajari lebih lanjut</a></button>
           </div>
           </div>
           </div><!-- End Portfolio Item -->

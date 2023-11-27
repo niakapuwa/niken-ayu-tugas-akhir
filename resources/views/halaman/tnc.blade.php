@@ -2,11 +2,10 @@
 @section('title', '| Syarat dan Ketentuan')
 
 @section('konten')
-<!-- ======= About Section ======= -->
-<!-- Tantangan -->    
-<section id="celen" class="putih">
+<!-- ======= SNK Section ======= --> 
+<section id="snk" class="snk">
     <div class="container" data-aos="fade-up">
-    <div class="putih-title">
+    <div class="snk-title">
       <p>Syarat dan Ketentuan</p>
       </div>
       <p>1. Pengenalan:</p>
@@ -57,5 +56,4 @@
       </ul>
       </div>
   </section>
-  <!-- End Tantangan -->
 @endsection

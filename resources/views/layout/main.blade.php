@@ -48,10 +48,10 @@
           <!-- halo, user -->
           @if (Auth::check())
           <li>
-            <a href="{{ route('user') }}">Halo, {{Auth::user()->nama}}!</a>
+            <a href="{{ route('user') }}">Profil {{Auth::user()->nama}}</a>
           </li>
           <li>
-            <a href="{{ route('signout') }}">Logout</a>
+            <a href="{{ route('signout') }}">Keluar</a>
           </li>
           @endif
         </ul>
@@ -65,6 +65,11 @@
 
 <!-- Footer -->  
 <footer id="footer" class="footer">
+  <div class="buttonkanan">
+    <a href="https://forms.gle/KK5toN5xyxjc8kTa9" target="_blank">
+      <img src="img/customer-service.png" class="img-fluid" alt="customer service" style="height: 7vh;">
+    </a>
+  </div>
 <button id="scrollUpBtn" class="btn btn-primary" title="Scroll to top">
       <i class="fas fa-chevron-up"></i>
     </button>
@@ -98,7 +103,7 @@
       <div class="col-lg-2 col-6 footer-links">
         <h4>Customer Care</h4>
         <ul>
-          <li><a href="/#about">Profil</a></li>
+          <li><a href="/#about">Profil Beridampak</a></li>
           <li><a href="syarat-dan-ketentuan">Syarat dan Ketentuan</a></li>
         </ul>
       </div>

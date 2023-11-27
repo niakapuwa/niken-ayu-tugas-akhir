@@ -43,16 +43,16 @@
       <nav id="navbar" class="navbar order-last oreder-lg-0">
         <ul>
           <li><a href="/#about">Tentang Kita</a></li>
-          <li><a href="/artikel">Artikel</a></li>
-          <li><a href="/lokasi">Lokasi</a></li>
-          <li><a href="/tantangan">Tantangan</a></li>
+          <li><a href="/#artikel">Artikel</a></li>
+          <li><a href="/#lokasi">Lokasi</a></li>
+          <li><a href="/#tantangan">Tantangan</a></li>
           <!-- halo, user -->
           @if (Auth::check())
           <li>
-            <a href="{{ route('user') }}">Halo, {{Auth::user()->nama}}!</a>
+            <a href="{{ route('user') }}">Profil {{Auth::user()->nama}}</a>
           </li>
           <li>
-            <a href="{{ route('signout') }}">Logout</a>
+            <a href="{{ route('signout') }}">Keluar</a>
           </li>
           @endif
         </ul>
@@ -63,14 +63,12 @@
   <!-- End Header -->
 
   <!-- ======= Up Section ======= -->
-  <section id="hero" class="d-flex align-items-center justify-content-center">
+  <section id="up" class="d-flex align-items-center justify-content-center">
     <div class="container" data-aos="fade-up">
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-        <div class="col-xl-8 col-lg-8">
+        <div class="col-xl-10 col-lg-10">
           <h2>Kenalan dengan</h2>
-          <h2><span>Beridampak</span></h2>
-          <p>Sebuah upaya edukasi mikroplastik kepada masyarakat secara umum dan luas</p>
-          <p>Di sini kamu akan menemukan informasi menarik seputar plastik dan bumi kita, 2 entitas yang saling berkesinambungan.</p>
+          <p>Sebuah upaya edukasi mikroplastik kepada masyarakat secara umum dan luas. <br> Di sini kamu akan menemukan informasi menarik seputar plastik dan bumi kita, 2 entitas yang saling berkesinambungan.</p>
         </div>
         
       </div>
@@ -96,10 +94,7 @@
             <li>Saran tempat daur ulang sampah dan penjual produk non-mikroplastik;</li>
             <li>Tantangan gaya hidup ramah lingkungan.</li>
             <br>
-            <li>Masih memiliki pertanyaan terkait website atau tantangan?
-            <a href="https://forms.gle/KK5toN5xyxjc8kTa9" target="_blank">
-            <img src="img/customer-service.png" class="img-fluid" alt="customer service" style="height: 5vh;">
-            </a></li>
+            <li>Masih memiliki pertanyaan terkait website atau tantangan? Kamu bisa tanya kapan saja melalui tombol kanan bawah yang mengambang di setiap halaman.</li>
           </ul>
         </div>
 
@@ -113,7 +108,7 @@
     <section id="artikel" class="portfolio sections-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h4>Seberapa tahu kamu tentang lingkungan kita?</h4>
+          <h4>Seberapa Tahu Kamu Tentang Lingkungan Kita?</h4>
         </div>
         <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4 portfolio-container">
@@ -123,8 +118,8 @@
                 <a href="img/straw.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="img/straw.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
                   <h4>Oxodegradable: Solusi atau Hanya Sebuah Ilusi dalam Menghadapi Krisis Plastik?</h4>
-                  <p>Dalam era modern, kita sering mendengar istilah "ramah lingkungan", termasuk dalam konteks plastik. Namun, sejauh mana kebenaran dari klaim ini? Apakah plastik ramah lingkungan benar-benar ramah terhadap Bumi kita?</p>
-                  <button class="btn-com"><a href="/Oxodegradable:-Solusi-atau-Hanya-Sebuah-Ilusi-dalam-Menghadapi-Krisis-Plastik?">Baca artikel</a></button>
+                  <p>Dalam era modern, kita sering mendengar istilah "ramah lingkungan", termasuk dalam konteks plastik. Namun, sejauh mana kebenaran dari klaim ini? Apakah plastik ramah lingkungan benar-benar ramah terhadap bumi kita?</p>
+                  <button class="btn-com"><a href="/Oxodegradable:-Solusi-atau-Hanya-Sebuah-Ilusi-dalam-Menghadapi-Krisis-Plastik?">Pelajari lebih lanjut</a></button>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -134,8 +129,8 @@
                 <a href="img/hujan.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="img/hujan.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
                   <h4>Paris: Saksi Bisu Hujan Mikroplastik Pertama Dunia</h4>
-                  <p>Paris, ibu kota Perancis yang sangat dikenal dengan cinta dan keindahannya, kini menghadapi ancaman baru: hujan mikroplastik. Sebuah fenomena yang mengkhawatirkan dan mencerminkan urgensi masalah lingkungan global.</p>
-                  <button class="btn-com"><a href="/Paris:-Saksi-Bisu-Hujan-Mikroplastik-Pertama-Dunia">Baca artikel</a></button>
+                  <p>Paris, ibu kota Perancis yang sangat dikenal dengan cinta dan keindahannya, kini menghadapi ancaman baru: hujan mikroplastik. Sebuah fenomena baru di dunia yang mengkhawatirkan dan mencerminkan bagaimana urgensi masalah lingkungan secara global.</p>
+                  <button class="btn-com"><a href="/Paris:-Saksi-Bisu-Hujan-Mikroplastik-Pertama-Dunia">Pelajari lebih lanjut</a></button>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -145,8 +140,8 @@
                 <a href="img/mikroplastik.jpeg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="img/mikroplastik.jpeg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
                   <h4>Mikroplastik: Ancaman Global dan Potensi Bahaya bagi Manusia</h4>
-                  <p>Dalam era modern ini, mikroplastik telah menjadi ancaman serius yang menyebar ke seluruh penjuru dunia. Mari kita gali lebih dalam tentang apa itu mikroplastik, pengaruhnya pada kesehatan, dan apa yang bisa kita lakukan untuk mengatasi masalah ini.</p>
-                  <button class="btn-com"><a href="/Mikroplastik:-Ancaman-Global-dan-Potensi-Bahaya-bagi-Manusia">Baca artikel</a></button>
+                  <p>Dalam era modern ini, mikroplastik telah menjadi ancaman serius yang menyebar ke seluruh penjuru dunia. Mari kita gali lebih dalam tentang apa itu mikroplastik, pengaruhnya pada kesehatan menurut para ahli, dan apa yang bisa kita lakukan untuk mengatasi masalah ini.</p>
+                  <button class="btn-com"><a href="/Mikroplastik:-Ancaman-Global-dan-Potensi-Bahaya-bagi-Manusia">Pelajari lebih lanjut</a></button>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -160,31 +155,31 @@
     <section id="lokasi" class="services">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <p>Yuk, ikut memberikan dampak</p>
+          <p>Yuk, Ikut Memberikan Dampak Dengan Menjaga Lingkungan</p>
         </div>
 
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
-              <h4>Buat bumi senang dengan beralih ke gaya hidup eco-living</h4>
+              <h4>Buat bumi senang dengan beralih ke gaya hidup ramah lingkungan</h4>
               <form action="/lokasi">
-                <button class="btn-center" type="submit">Cari kebutuhanmu segera</button>
+                <button class="btn-center" type="submit">Cari kebutuhanmu</button>
               </form>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
-              <h4>XX+</h4>
-              <h4>tempat yang bisa kamu kunjungi</h4>
+              <h4>10+</h4>
+              <h4>Tempat yang bisa kamu kunjungi</h4>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
-              <h4>Daur ulang sampahmu yuks, kamu bisa memulainya dari sekarang</h4>
+              <h4>Daur ulang sampahmu yuk, kamu bisa mulai dari sekarang</h4>
               <form action="/lokasi">
-                <button class="btn-center">Di sini</button>
+                <button class="btn-center">Cek lokasi di sekitarmu</button>
               </form>
             </div>
           </div>
@@ -198,11 +193,11 @@
     <section id="tantangan" class="tantang">
       <div class="container" data-aos="fade-up">
         <div class="tantang-title">
-          <p>Dare to try?</p>
+          <p>Berani Merubah Gaya Hidupmu?</p>
         </div>
         <div class="text-center">
-          <p>Tantang dirimu sendiri dengan menyelesaikan tantangan - tantangan gaya hidup ramah lingkungan di dalam sini</p>
-          <button class="btn-com"><a href="/tantangan">Tantang dirimu sendiri</a></button>
+          <p>Jangan hanya membaca, yuk ikut memberi dampak dengan mengikuti tantangan - tantangan dari kita. <br> Tantang dirimu sendiri dengan menyelesaikan tantangan gaya hidup ramah lingkungan di dalam sini!</p>
+          <button class="btn-com"><a href="/tantangan">Klik dan tantang dirimu</a></button>
         </div>
       </div>
     </section>
@@ -210,7 +205,12 @@
 
     <!-- Footer -->
     <footer id="footer" class="footer">
-<button id="scrollUpBtn" class="btn btn-primary" title="Scroll to top">
+    <div class="buttonkanan">
+    <a href="https://forms.gle/KK5toN5xyxjc8kTa9" target="_blank">
+      <img src="img/customer-service.png" class="img-fluid" alt="customer service" style="height: 7vh;">
+    </a>
+  </div>
+  <button id="scrollUpBtn" class="btn btn-primary" title="Scroll to top">
         <i class="fas fa-chevron-up"></i>
       </button>
       <div class="container">

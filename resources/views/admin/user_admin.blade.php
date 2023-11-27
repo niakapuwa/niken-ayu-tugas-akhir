@@ -79,10 +79,10 @@
       <input name="user_id" class="form-control" id="userID" value="{{ $data->id }}" hidden required>
       <div class="row">
         <div class="col-sm-12 form-group mb-0">
-          <button id="change-password-btn" class="btn btn-success float-center mt-1">Ubah Password</button>
+          <button id="change-password-btn" class="btn-get float-center mt-1">Ubah Password</button>
         </div>
         <div class="col-sm-12 form-group mb-0">
-          <button class="btn btn-warning float-center mt-1"><a href="{{ route('admin') }}">Kembali</a></button>
+          <button class="btn-n float-center mt-1"><a href="{{ route('admin') }}">Kembali</a></button>
         </div>
       </div>
 

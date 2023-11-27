@@ -63,7 +63,7 @@
     <div class="putih-title">
       <p>Data pengguna website</p>
     </div>
-    <table class="table">
+    <table>
       <thead>
         <tr>
           <th scope="col">Nama Pengguna</th>
@@ -76,11 +76,11 @@
       <tbody>
         @foreach ($data as $item)
         <tr>
-          <td>{{ $item->nama }}</td>
-          <td>{{ $item->email }}</td>
-          <td>{{ $item->created_at }}</td>
-          <td>{{ $item->file_count }}</td>
-          <td><a class='btn btn-warning btn-sm' href="{{ route('admin-user', ['user_id' => $item->id]) }}">Detail</td>
+          <td data-label="Nama Pengguna">{{ $item->nama }}</td>
+          <td data-label="Email">{{ $item->email }}</td>
+          <td data-label="Tanggal Daftar">{{ $item->created_at }}</td>
+          <td data-label="Total Poin">{{ $item->file_count }}</td>
+          <td data-label="Aksi"><a class='btn btn-warning btn-sm' href="{{ route('admin-user', ['user_id' => $item->id]) }}">Detail</td>
         </tr>
         @endforeach
       </tbody>
